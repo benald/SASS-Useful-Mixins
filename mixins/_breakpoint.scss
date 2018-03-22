@@ -15,8 +15,8 @@
 // example @include max-breakpoint(940) { width:80%; }
 
 // Bootstrap 
-// example @include min-breakpoint(940) { $screen-sm-min }
-// example @include max-breakpoint(940) { $screen-sm-max }
+// example @include min-breakpoint($screen-sm-min) { width:80%; }
+// example @include max-breakpoint($screen-sm-max) { width:80%; }
 
 @mixin min-breakpoint($size) {
   @media only screen and (min-width: $size + px) { @content; }
