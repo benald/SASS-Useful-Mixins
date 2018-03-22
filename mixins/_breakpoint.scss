@@ -10,8 +10,18 @@
 
 // ----------------------------------------------------------------------
 
-// example @include breakpoint(940) { width:80%; }
+// Au Naturale
+// example @include min-breakpoint(940) { width:80%; }
+// example @include max-breakpoint(940) { width:80%; }
 
-@mixin breakpoint($size) {
+// Bootstrap 
+// example @include min-breakpoint(940) { $screen-sm-min }
+// example @include max-breakpoint(940) { $screen-sm-max }
+
+@mixin min-breakpoint($size) {
+  @media only screen and (min-width: $size + px) { @content; }
+}
+
+@mixin max-breakpoint($size) {
   @media only screen and (max-width: $size + px) { @content; }
 }
